@@ -1112,3 +1112,327 @@
 9129	9422	7660005486574515	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
 9423	9533	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
 9423	9533	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+1863	2775	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+1863	2775	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+1863	2775	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+1863	2775	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+1863	2775	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+1863	2775	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+1863	2775	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+1863	2775	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+1899	7002	7660180422093645	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+7002	7354	7660180425638388	esp-idf/main/libmain.a	bb6baa8ed9156a65
+7355	16871	7660180520324344	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+7355	16871	7660180520324344	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+16871	17424	7660180526190957	Cronometro.elf	5e5798cbacaa6066
+17424	17801	7660180530075164	.bin_timestamp	a83a7da922dbb83d
+17424	17801	7660180530075164	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+17802	17904	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+17802	17904	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+155	382	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+155	382	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+155	382	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+155	382	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+155	382	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+155	382	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+155	382	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+155	382	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+163	508	7660181755869284	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+509	628	7660181757084100	esp-idf/main/libmain.a	bb6baa8ed9156a65
+629	8688	7660181837247312	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+629	8688	7660181837247312	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8688	9151	7660181842164976	Cronometro.elf	5e5798cbacaa6066
+9152	9423	7660181845034686	.bin_timestamp	a83a7da922dbb83d
+9152	9423	7660181845034686	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9423	9516	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9423	9516	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+117	285	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+117	285	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+117	285	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+117	285	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+117	285	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+117	285	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+117	285	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+117	285	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+126	356	7660182248914245	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+357	446	7660182249819737	esp-idf/main/libmain.a	bb6baa8ed9156a65
+446	8457	7660182329540198	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+446	8457	7660182329540198	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8458	8935	7660182334394837	Cronometro.elf	5e5798cbacaa6066
+8936	9220	7660182337536894	.bin_timestamp	a83a7da922dbb83d
+8936	9220	7660182337536894	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9220	9315	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9220	9315	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+145	314	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+145	314	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+145	314	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+145	314	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+145	314	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+145	314	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+145	314	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+145	314	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+160	388	7660182625004986	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+389	475	7660182625846310	esp-idf/main/libmain.a	bb6baa8ed9156a65
+476	8346	7660182704170438	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+476	8346	7660182704170438	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8346	8820	7660182709007431	Cronometro.elf	5e5798cbacaa6066
+8821	9103	7660182712101030	.bin_timestamp	a83a7da922dbb83d
+8821	9103	7660182712101030	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9103	9197	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9103	9197	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+102	274	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+102	274	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+102	274	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+102	274	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+102	274	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+102	274	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+102	274	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+102	274	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+111	342	7660183098523035	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+343	425	7660183099253141	esp-idf/main/libmain.a	bb6baa8ed9156a65
+425	8334	7660183178034753	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+425	8334	7660183178034753	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8335	8808	7660183182803844	Cronometro.elf	5e5798cbacaa6066
+8809	9091	7660183185919782	.bin_timestamp	a83a7da922dbb83d
+8809	9091	7660183185919782	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9092	9186	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9092	9186	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+110	277	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+110	277	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+110	277	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+110	277	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+110	277	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+110	277	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+110	277	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+110	277	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+115	283	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+115	283	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+115	283	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+115	283	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+115	283	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+115	283	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+115	283	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+115	283	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+124	357	7660185276170258	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+358	450	7660185277023336	esp-idf/main/libmain.a	bb6baa8ed9156a65
+450	8362	7660185355843622	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+450	8362	7660185355843622	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8363	8861	7660185360906195	Cronometro.elf	5e5798cbacaa6066
+8861	9136	7660185363925366	.bin_timestamp	a83a7da922dbb83d
+8861	9136	7660185363925366	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9137	9238	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9137	9238	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+102	266	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+102	266	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+102	266	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+102	266	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+102	266	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+102	266	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+102	266	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+102	266	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+110	335	7660185754218135	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+336	423	7660185755123036	esp-idf/main/libmain.a	bb6baa8ed9156a65
+104	267	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+104	267	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+104	267	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+104	267	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+104	267	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+104	267	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+104	267	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+104	267	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+112	337	7660186089437506	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+338	424	7660186090362317	esp-idf/main/libmain.a	bb6baa8ed9156a65
+425	8328	7660186169024311	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+425	8328	7660186169024311	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8328	8787	7660186173859153	Cronometro.elf	5e5798cbacaa6066
+8787	9053	7660186176595726	.bin_timestamp	a83a7da922dbb83d
+8787	9053	7660186176595726	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9054	9153	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9054	9153	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+274	519	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+274	519	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+274	519	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+274	519	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+274	519	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+274	519	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+274	519	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+274	519	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+283	4453	7660189589465690	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+4454	4589	7660189590886497	esp-idf/main/libmain.a	bb6baa8ed9156a65
+4589	13711	7660189681668124	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+4589	13711	7660189681668124	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+13711	14327	7660189687856814	Cronometro.elf	5e5798cbacaa6066
+14328	14760	7660189692542296	.bin_timestamp	a83a7da922dbb83d
+14328	14760	7660189692542296	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+14760	14906	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+14760	14906	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+120	302	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+120	302	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+120	302	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+120	302	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+120	302	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+120	302	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+120	302	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+120	302	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+129	381	7660189977791771	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+382	481	7660189978847715	esp-idf/main/libmain.a	bb6baa8ed9156a65
+482	8493	7660190058543665	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+482	8493	7660190058543665	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8493	9001	7660190063685420	Cronometro.elf	5e5798cbacaa6066
+9002	9543	7660190069353526	.bin_timestamp	a83a7da922dbb83d
+9002	9543	7660190069353526	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9543	9641	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9543	9641	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+118	284	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+118	284	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+118	284	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+118	284	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+118	284	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+118	284	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+118	284	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+118	284	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+126	365	7660190306616793	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+366	452	7660190307434348	esp-idf/main/libmain.a	bb6baa8ed9156a65
+453	8280	7660190385334464	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+453	8280	7660190385334464	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8280	8779	7660190390419256	Cronometro.elf	5e5798cbacaa6066
+8780	9056	7660190393513662	.bin_timestamp	a83a7da922dbb83d
+8780	9056	7660190393513662	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9057	9155	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9057	9155	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+109	281	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+109	281	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+109	281	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+109	281	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+109	281	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+109	281	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+109	281	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+109	281	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+118	355	7660190824464753	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+356	438	7660190825302884	esp-idf/main/libmain.a	bb6baa8ed9156a65
+438	8323	7660190903797038	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+438	8323	7660190903797038	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8324	8838	7660190909021817	Cronometro.elf	5e5798cbacaa6066
+8838	9108	7660190911963519	.bin_timestamp	a83a7da922dbb83d
+8838	9108	7660190911963519	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9108	9208	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9108	9208	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+114	290	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+114	290	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+114	290	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+114	290	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+114	290	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+114	290	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+114	290	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+114	290	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+122	357	7660191419261063	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+357	448	7660191420194637	esp-idf/main/libmain.a	bb6baa8ed9156a65
+449	8214	7660191497427074	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+449	8214	7660191497427074	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8215	8688	7660191502373924	Cronometro.elf	5e5798cbacaa6066
+8689	8966	7660191505363402	.bin_timestamp	a83a7da922dbb83d
+8689	8966	7660191505363402	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+8967	9056	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+8967	9056	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+103	277	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+103	277	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+103	277	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+103	277	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+103	277	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+103	277	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+103	277	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+103	277	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+113	345	7660191747940021	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+346	432	7660191748845695	esp-idf/main/libmain.a	bb6baa8ed9156a65
+433	8452	7660191828673254	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+433	8452	7660191828673254	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8452	8956	7660191833963791	Cronometro.elf	5e5798cbacaa6066
+8957	9226	7660191836811944	.bin_timestamp	a83a7da922dbb83d
+8957	9226	7660191836811944	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9227	9324	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9227	9324	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+118	285	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+118	285	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+118	285	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+118	285	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+118	285	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+118	285	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+118	285	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+118	285	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+127	373	7660192107538687	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+374	462	7660192108356765	esp-idf/main/libmain.a	bb6baa8ed9156a65
+462	8310	7660192186460901	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+462	8310	7660192186460901	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8310	8801	7660192191553469	Cronometro.elf	5e5798cbacaa6066
+8802	9091	7660192194686674	.bin_timestamp	a83a7da922dbb83d
+8802	9091	7660192194686674	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9091	9181	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9091	9181	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+107	299	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+107	299	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+107	299	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+107	299	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+107	299	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+107	299	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+107	299	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+107	299	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+116	375	7660192455107847	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+376	458	7660192455849762	esp-idf/main/libmain.a	bb6baa8ed9156a65
+459	8344	7660192534276063	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+459	8344	7660192534276063	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8344	8817	7660192539273575	Cronometro.elf	5e5798cbacaa6066
+8818	9088	7660192542177875	.bin_timestamp	a83a7da922dbb83d
+8818	9088	7660192542177875	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9088	9181	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9088	9181	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+108	272	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+108	272	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+108	272	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+108	272	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+108	272	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+108	272	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+108	272	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+108	272	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+117	349	7660192816020010	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+350	434	7660192816806440	esp-idf/main/libmain.a	bb6baa8ed9156a65
+434	8339	7660192895506902	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+434	8339	7660192895506902	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8340	8809	7660192900318325	Cronometro.elf	5e5798cbacaa6066
+8809	9079	7660192903308479	.bin_timestamp	a83a7da922dbb83d
+8809	9079	7660192903308479	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9080	9176	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9080	9176	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+116	292	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+116	292	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+116	292	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+116	292	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+116	292	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+116	292	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+116	292	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+116	292	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+124	362	7660193379794760	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+363	446	7660193380625939	esp-idf/main/libmain.a	bb6baa8ed9156a65
+446	8336	7660193459133845	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+446	8336	7660193459133845	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8337	8830	7660193464269194	Cronometro.elf	5e5798cbacaa6066
+8831	9123	7660193467382825	.bin_timestamp	a83a7da922dbb83d
+8831	9123	7660193467382825	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9123	9215	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9123	9215	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+118	293	7659996109828136	bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+118	293	7659996109828136	bootloader/bootloader.elf	17a5b795e9519e40
+118	293	7659996109828136	bootloader/bootloader.bin	17a5b795e9519e40
+118	293	7659996109828136	bootloader/bootloader.map	17a5b795e9519e40
+118	293	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	17a5b795e9519e40
+118	293	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.elf	17a5b795e9519e40
+118	293	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.bin	17a5b795e9519e40
+118	293	7659996109828136	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/bootloader/bootloader.map	17a5b795e9519e40
+127	364	7660194229230096	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	719b2805024319fa
+365	453	7660194230159805	esp-idf/main/libmain.a	bb6baa8ed9156a65
+454	8336	7660194308557889	esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+454	8336	7660194308557889	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esp_system/ld/sections.ld	985b4446f3245c6a
+8337	8828	7660194313558249	Cronometro.elf	5e5798cbacaa6066
+8830	9117	7660194316737452	.bin_timestamp	a83a7da922dbb83d
+8830	9117	7660194316737452	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/.bin_timestamp	a83a7da922dbb83d
+9117	9211	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb
+9117	9211	0	C:/Sistemas embebidos/Cursos/Sistemas operativos de tiempo real/Cronometro/Cronometro/build/esp-idf/esptool_py/CMakeFiles/app_check_size	7c5bd61f640875bb

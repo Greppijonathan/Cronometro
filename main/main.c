@@ -231,8 +231,8 @@ void ActualizarPantalla(void *parametros)
     ILI9341Init();
     ILI9341Rotate(ILI9341_Landscape_1);
 
-    panel_t Segundos = CrearPanel(60, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Decimas = CrearPanel(220, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Segundos = CrearPanel(130, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Decimas = CrearPanel(270, 150, 1, (DIGITO_ALTO - 20), (DIGITO_ANCHO - 20), DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
     struct digitos_previos
     {
@@ -263,7 +263,7 @@ void ActualizarPantalla(void *parametros)
             }
             //   ILI9341DrawFilledCircle(120, 140, 2, DIGITO_ENCENDIDO);
             //   ILI9341DrawFilledCircle(120, 100, 2, DIGITO_ENCENDIDO);
-            ILI9341DrawFilledCircle(200, 160, 4, DIGITO_ENCENDIDO);
+            ILI9341DrawFilledCircle(260, 225, 3, DIGITO_ENCENDIDO);
 
             xSemaphoreGive(semaforoAccesoDigitos); // Se libera el recurso compartid, se libera el semaforo
         }
