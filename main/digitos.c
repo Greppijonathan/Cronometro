@@ -39,17 +39,20 @@ SPDX-License-Identifier: MIT
 
 /* === Private data type declarations ============================================================================== */
 
-typedef struct punto_s {
+typedef struct punto_s
+{
     uint16_t x;
     uint16_t y;
-} * punto_t;
+} *punto_t;
 
-typedef struct area_s {
+typedef struct area_s
+{
     struct punto_s desde;
     struct punto_s hasta;
-} * area_t;
+} *area_t;
 
-typedef struct segmentos_s {
+typedef struct segmentos_s
+{
     struct area_s a;
     struct area_s b;
     struct area_s c;
@@ -57,9 +60,10 @@ typedef struct segmentos_s {
     struct area_s e;
     struct area_s f;
     struct area_s g;
-} * segmentos_t;
+} *segmentos_t;
 
-struct panel_s {
+struct panel_s
+{
     struct punto_s origen;
     uint16_t digitos;
     uint16_t ancho;
@@ -74,10 +78,22 @@ struct panel_s {
 /* === Private variable declarations =============================================================================== */
 
 static const uint8_t DIGITOS[] = {
-    0x3F, 0x06, 0x5B, 0x4F, // 0,1,2,3
-    0x66, 0x6D, 0x7D, 0x07, // 4,5,6,7
-    0x7F, 0x6F, 0x77, 0x7C, // 8,9,A,B
-    0x39, 0x5E, 0x79, 0x71, // C,D,E,F
+    0x3F,
+    0x06,
+    0x5B,
+    0x4F, // 0,1,2,3
+    0x66,
+    0x6D,
+    0x7D,
+    0x07, // 4,5,6,7
+    0x7F,
+    0x6F,
+    0x77,
+    0x7C, // 8,9,A,B
+    0x39,
+    0x5E,
+    0x79,
+    0x71, // C,D,E,F
     0x00,
 };
 
@@ -89,20 +105,25 @@ static const uint8_t DIGITOS[] = {
 
 /* === Private function definitions ================================================================================ */
 
-panel_t CrearInstancia(void) {
+panel_t CrearInstancia(void)
+{
     static struct panel_s instancias[MAXIMO_PANELES];
 
-    for (int indice = 0; indice < MAXIMO_PANELES; indice++) {
-        if (instancias[indice].digitos == 0) {
+    for (int indice = 0; indice < MAXIMO_PANELES; indice++)
+    {
+        if (instancias[indice].digitos == 0)
+        {
             return &(instancias[indice]);
         }
     }
     return NULL;
 }
 
-void CalcularGeometria(panel_t self) {
+void CalcularGeometria(panel_t self)
+{
 
-    if (self->ancho == 0) {
+    if (self->ancho == 0)
+    {
         self->ancho = (self->alto * 60) / 100;
     }
 
@@ -130,7 +151,8 @@ void CalcularGeometria(panel_t self) {
     s->b.hasta.x = s->c.hasta.x = self->ancho - (margen + ancho_barra);
 }
 
-void BorrarDigito(panel_t self, uint8_t digito) {
+void BorrarDigito(panel_t self, uint8_t digito)
+{
     struct area_s area;
 
     area.desde.x = self->origen.x + digito * self->ancho;
@@ -141,7 +163,8 @@ void BorrarDigito(panel_t self, uint8_t digito) {
     ILI9341DrawFilledRectangle(area.desde.x, area.desde.y, area.hasta.x, area.hasta.y, self->fondo);
 }
 
-void DibujarSegmento(panel_t self, uint8_t digito, area_t segmento, uint16_t color) {
+void DibujarSegmento(panel_t self, uint8_t digito, area_t segmento, uint16_t color)
+{
     struct area_s area;
 
     area.desde.x = self->origen.x + digito * self->ancho + segmento->desde.x;
@@ -155,19 +178,27 @@ void DibujarSegmento(panel_t self, uint8_t digito, area_t segmento, uint16_t col
 /* === Public function implementation ============================================================================== */
 
 panel_t CrearPanel(uint16_t x, uint16_t y, uint16_t digitos, uint16_t alto, uint16_t ancho, uint16_t encendido,
-                   uint16_t apagado, uint16_t fondo) {
+                   uint16_t apagado, uint16_t fondo)
+{
     panel_t self = CrearInstancia();
-    if (self) {
+    if (self)
+    {
         self->origen.x = x;
         self->origen.y = y;
         self->alto = alto;
         self->ancho = ancho;
 
-        if (digitos > MAXIMO_DIGITOS) {
+        // Validación de número de dígitos
+        if (digitos > MAXIMO_DIGITOS)
+        {
             self->digitos = MAXIMO_DIGITOS;
-        } else if (digitos < 1) {
+        }
+        else if (digitos < 1)
+        {
             self->digitos = 1;
-        } else {
+        }
+        else
+        {
             self->digitos = digitos;
         }
 
@@ -175,21 +206,33 @@ panel_t CrearPanel(uint16_t x, uint16_t y, uint16_t digitos, uint16_t alto, uint
         self->apagado = apagado;
         self->fondo = fondo;
 
+        // Calcular geometría del panel
         CalcularGeometria(self);
     }
+    else
+    {
+        // Log de error si CrearInstancia falla
+        //    printf("Error: No se pudo crear la instancia del panel\n");
+        return NULL;
+    }
 
-    for (int i = 0; i < self->digitos; i++) {
-        DibujarDigito(self, i, 0xFF);
+    // Dibujar dígitos iniciales con valor 0
+    for (int i = 0; i < self->digitos; i++)
+    {
+        DibujarDigito(self, i, 0); // Cambié 0xFF por 0
     }
     return self;
 }
 
-void DibujarDigito(panel_t self, uint8_t posicion, uint8_t valor) {
-    if (posicion < self->digitos) {
+void DibujarDigito(panel_t self, uint8_t posicion, uint8_t valor)
+{
+    if (posicion < self->digitos)
+    {
         uint8_t segmentos;
 
         self->valores[posicion] = valor;
-        if (valor > sizeof(DIGITOS)) {
+        if (valor > sizeof(DIGITOS))
+        {
             self->valores[posicion] = sizeof(DIGITOS);
         }
         segmentos = DIGITOS[self->valores[posicion]];

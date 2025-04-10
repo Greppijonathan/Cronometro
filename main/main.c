@@ -13,8 +13,8 @@ debe parpadear en verde y cuando está detenida debe permanecer en rojo.
 #include "driver/gpio.h"
 
 // Definiciones generales
-#define DIGITO_ANCHO 60
-#define DIGITO_ALTO 100
+#define DIGITO_ANCHO 50
+#define DIGITO_ALTO 90
 #define DIGITO_ENCENDIDO ILI9341_RED
 #define DIGITO_APAGADO 0x3800
 #define DIGITO_FONDO ILI9341_BLACK
@@ -95,6 +95,8 @@ void ReiniciarCronometro()
         digitosActuales.unidadesSegundos = 0;
         digitosActuales.decenasSegundos = 0;
         digitosActuales.decimasSegundo = 0;
+        digitosActuales.unidadesMinutos = 0;
+        digitosActuales.decenasMinutos = 0;
         xSemaphoreGive(semaforoAccesoDigitos);
     }
 }
@@ -315,9 +317,10 @@ void ActualizarPantalla(void *parametros)
     ILI9341Init();
     ILI9341Rotate(ILI9341_Landscape_1);
 
-    //    panel_t Minutos = CrearPanel(0, 0, 2, (DIGITO_ALTO - 10), (DIGITO_ANCHO - 10), DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Segundos = CrearPanel(130, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Decimas = CrearPanel(270, 150, 1, (DIGITO_ALTO - 20), (DIGITO_ANCHO - 20), DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    // Crear panel para minutos y segundos (4 dígitos)
+    panel_t PanelMinutosSegundos = CrearPanel(30, 70, 4, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    // Crear panel para décimas de segundo (1 dígito)
+    panel_t PanelDecimas = CrearPanel(240, 70, 1, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
     struct digitos_previos
     {
@@ -332,37 +335,34 @@ void ActualizarPantalla(void *parametros)
     {
         if (xSemaphoreTake(semaforoAccesoDigitos, portMAX_DELAY)) // Se accede al recurso compartido, se toma el semáforo
         {
-            // Lógica para detectar cambio en los dígitos y mostrarlos
-            if (digitosActuales.decimasSegundo != digitosPrevios.decimasSegundosAnterior)
+            // Lógica para actualizar el panel de minutos y segundos
+            if (digitosActuales.decenasMinutos != digitosPrevios.decenasMinutosAnterior)
             {
-                DibujarDigito(Decimas, 0, digitosActuales.decimasSegundo);
-                digitosPrevios.decimasSegundosAnterior = digitosActuales.decimasSegundo;
-            }
-            if (digitosActuales.unidadesSegundos != digitosPrevios.unidadesSegundosAnterior)
-            {
-                DibujarDigito(Segundos, 1, digitosActuales.unidadesSegundos);
-                digitosPrevios.unidadesSegundosAnterior = digitosActuales.unidadesSegundos;
-            }
-            if (digitosActuales.decenasSegundos != digitosPrevios.decenasSegundosAnterior)
-            {
-                DibujarDigito(Segundos, 0, digitosActuales.decenasSegundos);
-                digitosPrevios.decenasSegundosAnterior = digitosActuales.decenasSegundos;
+                DibujarDigito(PanelMinutosSegundos, 0, digitosActuales.decenasMinutos);
+                digitosPrevios.decenasMinutosAnterior = digitosActuales.decenasMinutos;
             }
             if (digitosActuales.unidadesMinutos != digitosPrevios.unidadesMinutosAnterior)
             {
-                //                DibujarDigito(Minutos, 1, digitosActuales.unidadesMinutos);
+                DibujarDigito(PanelMinutosSegundos, 1, digitosActuales.unidadesMinutos);
                 digitosPrevios.unidadesMinutosAnterior = digitosActuales.unidadesMinutos;
             }
-            if (digitosActuales.decenasMinutos != digitosPrevios.decenasMinutosAnterior)
+            if (digitosActuales.decenasSegundos != digitosPrevios.decenasSegundosAnterior)
             {
-                //                DibujarDigito(Minutos, 0, digitosActuales.decenasMinutos);
-                digitosPrevios.decenasMinutosAnterior = digitosActuales.decenasMinutos;
+                DibujarDigito(PanelMinutosSegundos, 2, digitosActuales.decenasSegundos);
+                digitosPrevios.decenasSegundosAnterior = digitosActuales.decenasSegundos;
             }
-            // Doble separador
-            //            ILI9341DrawFilledCircle(117, 120, 3, DIGITO_ENCENDIDO);
-            //            ILI9341DrawFilledCircle(117, 80, 3, DIGITO_ENCENDIDO);
-            // Punto de décimas de segundo
-            ILI9341DrawFilledCircle(260, 225, 3, DIGITO_ENCENDIDO);
+            if (digitosActuales.unidadesSegundos != digitosPrevios.unidadesSegundosAnterior)
+            {
+                DibujarDigito(PanelMinutosSegundos, 3, digitosActuales.unidadesSegundos);
+                digitosPrevios.unidadesSegundosAnterior = digitosActuales.unidadesSegundos;
+            }
+
+            // Lógica para actualizar el panel de décimas de segundo
+            if (digitosActuales.decimasSegundo != digitosPrevios.decimasSegundosAnterior)
+            {
+                DibujarDigito(PanelDecimas, 0, digitosActuales.decimasSegundo);
+                digitosPrevios.decimasSegundosAnterior = digitosActuales.decimasSegundo;
+            }
 
             xSemaphoreGive(semaforoAccesoDigitos); // Se libera el recurso compartido, se libera el semáforo
         }
