@@ -239,8 +239,8 @@ void ActualizarPantalla(void *parametros)
     ILI9341Rotate(ILI9341_Landscape_1);
 
     // Centrado a la izquierda
-    panel_t horas = CrearPanel(0, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t minutos = CrearPanel(135, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Minutos = CrearPanel(0, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Segundos = CrearPanel(135, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
     struct digitos_previos
     {
@@ -257,27 +257,28 @@ void ActualizarPantalla(void *parametros)
             // Comparar y actualizar solo los dígitos que cambiaron
             if (digitosActuales.decenasMinutos != digitosPrevios.decenasMinutosAnterior)
             {
-                DibujarDigito(horas, 0, digitosActuales.decenasMinutos);
+                DibujarDigito(Minutos, 0, digitosActuales.decenasMinutos);
                 digitosPrevios.decenasMinutosAnterior = digitosActuales.decenasMinutos;
             }
             if (digitosActuales.unidadesMinutos != digitosPrevios.unidadesMinutosAnterior)
             {
-                DibujarDigito(horas, 1, digitosActuales.unidadesMinutos);
+                DibujarDigito(Minutos, 1, digitosActuales.unidadesMinutos);
                 digitosPrevios.unidadesMinutosAnterior = digitosActuales.unidadesMinutos;
             }
             if (digitosActuales.decenasSegundos != digitosPrevios.decenasSegundosAnterior)
             {
-                DibujarDigito(minutos, 0, digitosActuales.decenasSegundos);
+                DibujarDigito(Segundos, 0, digitosActuales.decenasSegundos);
                 digitosPrevios.decenasSegundosAnterior = digitosActuales.decenasSegundos;
             }
             if (digitosActuales.unidadesSegundos != digitosPrevios.unidadesSegundosAnterior)
             {
-                DibujarDigito(minutos, 1, digitosActuales.unidadesSegundos);
+                DibujarDigito(Segundos, 1, digitosActuales.unidadesSegundos);
                 digitosPrevios.unidadesSegundosAnterior = digitosActuales.unidadesSegundos;
             }
 
             ILI9341DrawFilledCircle(127, 90, 2, DIGITO_ENCENDIDO);
             ILI9341DrawFilledCircle(127, 150, 2, DIGITO_ENCENDIDO);
+            ILI9341DrawFilledCircle(260, 150, 2, DIGITO_ENCENDIDO);
 
             xSemaphoreGive(semaforoAccesoDigitos); // Se libera el recurso compartid, se libera el semaforo
         }
