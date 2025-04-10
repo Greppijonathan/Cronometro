@@ -15,7 +15,7 @@ debe parpadear en verde y cuando está detenida debe permanecer en rojo.
 // Definiciones generales
 #define DIGITO_ANCHO 60
 #define DIGITO_ALTO 100
-#define DIGITO_ENCENDIDO ILI9341_BLUE2
+#define DIGITO_ENCENDIDO ILI9341_RED
 #define DIGITO_APAGADO 0x3800
 #define DIGITO_FONDO ILI9341_BLACK
 
@@ -141,6 +141,78 @@ void ConfigurarTeclas(void)
     gpio_set_direction(TEC2_Reiniciar, GPIO_MODE_INPUT);
     gpio_set_pull_mode(TEC2_Reiniciar, GPIO_PULLUP_ONLY);
 }
+
+/**
+ * @brief Dibuja un mensaje de inicio en la pantalla y enciende los LEDs RGB
+ *
+ * Dibuja un mensaje de inicio en la pantalla y enciende los LEDs RGB de manera
+ * secuencial. La barra es dibujada en azul y cada 2 incrementos se enciende un
+ * LED diferente. La pausa entre cada paso es de 750 ms.
+ *
+ * @note Esta función debe ser llamada solo una vez al inicio del programa.
+ */
+void MensajeInicio(void)
+{
+    ILI9341Init();
+    ILI9341Rotate(ILI9341_Landscape_1);
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+    ILI9341Fill(ILI9341_BLACK);
+
+    // Para controlar la barra
+    int barraXInicio = 55;                     // Coordenada X inicial de la barra
+    int barraY = 141;                          // Coordenada Y de la barra
+    int barraAnchoTotal = 209;                 // Ancho total de la barra
+    int barraAltura = 10;                      // Altura de la barra
+    int barraIncremento = barraAnchoTotal / 6; // Incremento en 6 pasos, ajustado para evitar espacios
+
+    // Dibujar el texto centrado
+    ILI9341DrawString(55, 111, "Iniciando Cronometro", &font_11x18, ILI9341_BLUE2, ILI9341_BLACK);
+
+    // Dibujar el contorno de la barra en rojo
+    ILI9341DrawRectangle(barraXInicio, barraY, barraXInicio + barraAnchoTotal, barraY + barraAltura, ILI9341_BLUE2);
+
+    // Configurar GPIOs de LEDs
+    gpio_set_direction(RGB_ROJO, GPIO_MODE_OUTPUT);
+    gpio_set_direction(RGB_VERDE, GPIO_MODE_OUTPUT);
+    gpio_set_direction(RGB_AZUL, GPIO_MODE_OUTPUT);
+
+    // Apagar LEDs al inicio
+    gpio_set_level(RGB_ROJO, 0);
+    gpio_set_level(RGB_VERDE, 0);
+    gpio_set_level(RGB_AZUL, 0);
+
+    // Dibujar la barra interior en azul y encender LEDs secuencialmente
+    for (int i = 1; i <= 6; i++)
+    {
+        // Incrementar la barra
+        int barraXFinal = barraXInicio + (barraIncremento * i);
+        if (i == 6)
+            barraXFinal = barraXInicio + barraAnchoTotal; // Asegurar que el último segmento complete el ancho
+        ILI9341DrawFilledRectangle(barraXInicio, barraY, barraXFinal, barraY + barraAltura, ILI9341_BLUE2);
+
+        // Encender un LED cada 2 incrementos
+        if (i == 2)
+        {
+            gpio_set_level(RGB_ROJO, 1); // Enciende LED rojo
+        }
+        else if (i == 4)
+        {
+            gpio_set_level(RGB_ROJO, 0);  // Apaga LED rojo
+            gpio_set_level(RGB_VERDE, 1); // Enciende LED verde
+        }
+        else if (i == 6)
+        {
+            gpio_set_level(RGB_VERDE, 0); // Apaga LED verde
+            gpio_set_level(RGB_AZUL, 1);  // Enciende LED azul
+        }
+
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(750)); // Pausa de 750 ms entre cada paso
+    }
+
+    // Antes de salir, limpiar la pantalla para que quede lista para el cronómetro
+    ILI9341Fill(ILI9341_BLACK);
+}
+
 /*****************************************FUNCIONES DE LAS TAREAS*****************************************/
 
 /**
@@ -228,10 +300,10 @@ void EscanearPulsadores(void *parametros)
 void ActualizarPantalla(void *parametros)
 {
     TickType_t xLastWakeTime = xTaskGetTickCount();
-    ILI9341Init();
-    ILI9341Rotate(ILI9341_Landscape_1);
+    //    ILI9341Init();
+    //    ILI9341Rotate(ILI9341_Landscape_1);
 
-    panel_t Segundos = CrearPanel(130, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Segundos = CrearPanel(100, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
     panel_t Decimas = CrearPanel(270, 150, 1, (DIGITO_ALTO - 20), (DIGITO_ANCHO - 20), DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
     struct digitos_previos
@@ -261,8 +333,10 @@ void ActualizarPantalla(void *parametros)
                 DibujarDigito(Segundos, 0, digitosActuales.decenasSegundos);
                 digitosPrevios.decenasSegundosAnterior = digitosActuales.decenasSegundos;
             }
-            //   ILI9341DrawFilledCircle(120, 140, 2, DIGITO_ENCENDIDO);
-            //   ILI9341DrawFilledCircle(120, 100, 2, DIGITO_ENCENDIDO);
+            // Doble separador
+            //    ILI9341DrawFilledCircle(115, 120, 3, DIGITO_ENCENDIDO);
+            //    ILI9341DrawFilledCircle(115, 80, 3, DIGITO_ENCENDIDO);
+            // Punto de decimas de segundo
             ILI9341DrawFilledCircle(260, 225, 3, DIGITO_ENCENDIDO);
 
             xSemaphoreGive(semaforoAccesoDigitos); // Se libera el recurso compartid, se libera el semaforo
@@ -279,6 +353,7 @@ void app_main(void)
     ConfigurarSalidasLed();
     ConfigurarTeclas();
     // Se crean las tareas
+    MensajeInicio();
     xTaskCreate(ManejarEstadoCronometro, "ManejarEstadoCronometro", 2048, NULL, 2, NULL);
     xTaskCreate(EscanearPulsadores, "EscanearPulsadores", 1024, NULL, 1, NULL);
     xTaskCreate(ActualizarPantalla, "ActualizarPantalla", 4096, NULL, 1, NULL);
