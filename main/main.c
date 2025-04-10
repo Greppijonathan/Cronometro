@@ -40,13 +40,12 @@ volatile EstadoCronometro estadoActual = ESTADO_PAUSADO; // Se inicializa en pau
 // Estructura de los dígitos
 typedef struct
 {
-    int unidadesSegundos;
     int decenasSegundos;
-    int unidadesMinutos;
-    int decenasMinutos;
+    int unidadesSegundos;
+    int decimasSegundo;
 } DigitosCronometro;
 
-DigitosCronometro digitosActuales = {0, 0, 0, 0};
+DigitosCronometro digitosActuales = {0, 0, 0};
 SemaphoreHandle_t semaforoAccesoDigitos;
 
 /*****************************************FUNCIONES AUXILIARES**********************************************/
@@ -56,25 +55,20 @@ SemaphoreHandle_t semaforoAccesoDigitos;
  */
 void ActualizarDigitos()
 {
-    if (xSemaphoreTake(semaforoAccesoDigitos, portMAX_DELAY)) // se toma recurso , se actualiza el MUTEX
+    if (xSemaphoreTake(semaforoAccesoDigitos, portMAX_DELAY)) // Se toma recurso, se actualiza el MUTEX
     {
-        digitosActuales.unidadesSegundos = (digitosActuales.unidadesSegundos + 1) % 10;
+        digitosActuales.decimasSegundo = (digitosActuales.decimasSegundo + 1) % 10;
 
-        if (digitosActuales.unidadesSegundos == 0)
+        if (digitosActuales.decimasSegundo == 0)
         {
-            digitosActuales.decenasSegundos = (digitosActuales.decenasSegundos + 1) % 6;
+            digitosActuales.unidadesSegundos = (digitosActuales.unidadesSegundos + 1) % 10;
 
-            if (digitosActuales.decenasSegundos == 0)
+            if (digitosActuales.unidadesSegundos == 0)
             {
-                digitosActuales.unidadesMinutos = (digitosActuales.unidadesMinutos + 1) % 10;
-
-                if (digitosActuales.unidadesMinutos == 0)
-                {
-                    digitosActuales.decenasMinutos = (digitosActuales.decenasMinutos + 1) % 6;
-                }
+                digitosActuales.decenasSegundos = (digitosActuales.decenasSegundos + 1) % 6;
             }
         }
-        xSemaphoreGive(semaforoAccesoDigitos); // se libera el MUTEX
+        xSemaphoreGive(semaforoAccesoDigitos); // Se libera el MUTEX
     }
 }
 
@@ -88,8 +82,7 @@ void ReiniciarCronometro()
     {
         digitosActuales.unidadesSegundos = 0;
         digitosActuales.decenasSegundos = 0;
-        digitosActuales.unidadesMinutos = 0;
-        digitosActuales.decenasMinutos = 0;
+        digitosActuales.decimasSegundo = 0;
         xSemaphoreGive(semaforoAccesoDigitos);
     }
 }
@@ -183,7 +176,7 @@ void ManejarEstadoCronometro(void *parametros)
             break;
         }
         estadoLed = !estadoLed;
-        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(100));
     }
 }
 
@@ -238,57 +231,50 @@ void ActualizarPantalla(void *parametros)
     ILI9341Init();
     ILI9341Rotate(ILI9341_Landscape_1);
 
-    // Centrado a la izquierda
-    panel_t Minutos = CrearPanel(0, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
-    panel_t Segundos = CrearPanel(135, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Segundos = CrearPanel(60, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Decimas = CrearPanel(220, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
     struct digitos_previos
     {
-        int decenasMinutosAnterior;
-        int unidadesMinutosAnterior;
         int decenasSegundosAnterior;
         int unidadesSegundosAnterior;
-    } digitosPrevios = {-1, -1, -1, -1}; // Inicializamos con valores "inválidos"
+        int decimasSegundosAnterior;
+    } digitosPrevios = {-1, -1, -1}; // Inicializamos con valores "inválidos"
 
     while (1)
     {
         if (xSemaphoreTake(semaforoAccesoDigitos, portMAX_DELAY)) // Se accede al recurso compartido, se toma el semaforo
         {
-            // Comparar y actualizar solo los dígitos que cambiaron
-            if (digitosActuales.decenasMinutos != digitosPrevios.decenasMinutosAnterior)
+            // Logica para detectar cambio en los digitos y mostrarlos
+            if (digitosActuales.decimasSegundo != digitosPrevios.decimasSegundosAnterior)
             {
-                DibujarDigito(Minutos, 0, digitosActuales.decenasMinutos);
-                digitosPrevios.decenasMinutosAnterior = digitosActuales.decenasMinutos;
-            }
-            if (digitosActuales.unidadesMinutos != digitosPrevios.unidadesMinutosAnterior)
-            {
-                DibujarDigito(Minutos, 1, digitosActuales.unidadesMinutos);
-                digitosPrevios.unidadesMinutosAnterior = digitosActuales.unidadesMinutos;
-            }
-            if (digitosActuales.decenasSegundos != digitosPrevios.decenasSegundosAnterior)
-            {
-                DibujarDigito(Segundos, 0, digitosActuales.decenasSegundos);
-                digitosPrevios.decenasSegundosAnterior = digitosActuales.decenasSegundos;
+                DibujarDigito(Decimas, 0, digitosActuales.decimasSegundo);
+                digitosPrevios.decimasSegundosAnterior = digitosActuales.decimasSegundo;
             }
             if (digitosActuales.unidadesSegundos != digitosPrevios.unidadesSegundosAnterior)
             {
                 DibujarDigito(Segundos, 1, digitosActuales.unidadesSegundos);
                 digitosPrevios.unidadesSegundosAnterior = digitosActuales.unidadesSegundos;
             }
-
-            ILI9341DrawFilledCircle(127, 90, 2, DIGITO_ENCENDIDO);
-            ILI9341DrawFilledCircle(127, 150, 2, DIGITO_ENCENDIDO);
-            ILI9341DrawFilledCircle(260, 150, 2, DIGITO_ENCENDIDO);
+            if (digitosActuales.decenasSegundos != digitosPrevios.decenasSegundosAnterior)
+            {
+                DibujarDigito(Segundos, 0, digitosActuales.decenasSegundos);
+                digitosPrevios.decenasSegundosAnterior = digitosActuales.decenasSegundos;
+            }
+            //   ILI9341DrawFilledCircle(120, 140, 2, DIGITO_ENCENDIDO);
+            //   ILI9341DrawFilledCircle(120, 100, 2, DIGITO_ENCENDIDO);
+            ILI9341DrawFilledCircle(200, 160, 4, DIGITO_ENCENDIDO);
 
             xSemaphoreGive(semaforoAccesoDigitos); // Se libera el recurso compartid, se libera el semaforo
         }
-        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(250)); // Tiempo de actualización de pantalla
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(50)); // Tiempo de actualización de pantalla
     }
 }
 /***************************************** app_main()*****************************************/
 void app_main(void)
 {
-    semaforoAccesoDigitos = xSemaphoreCreateMutex(); // Se crea el semaforo que se va a utilizar en las diferentes zonas del codigo
+    // Se crea el semaforo que se va a utilizar en las diferentes zonas del codigo
+    semaforoAccesoDigitos = xSemaphoreCreateMutex();
     // configuraciones iniciales
     ConfigurarSalidasLed();
     ConfigurarTeclas();
