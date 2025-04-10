@@ -300,10 +300,11 @@ void EscanearPulsadores(void *parametros)
 void ActualizarPantalla(void *parametros)
 {
     TickType_t xLastWakeTime = xTaskGetTickCount();
-    //    ILI9341Init();
-    //    ILI9341Rotate(ILI9341_Landscape_1);
+    ILI9341Init();
+    ILI9341Rotate(ILI9341_Landscape_1);
 
-    panel_t Segundos = CrearPanel(100, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    //  panel_t Minutos = CrearPanel(0, 0, 2, (DIGITO_ALTO - 10), (DIGITO_ANCHO - 10), DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    panel_t Segundos = CrearPanel(130, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
     panel_t Decimas = CrearPanel(270, 150, 1, (DIGITO_ALTO - 20), (DIGITO_ANCHO - 20), DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
     struct digitos_previos
@@ -334,8 +335,8 @@ void ActualizarPantalla(void *parametros)
                 digitosPrevios.decenasSegundosAnterior = digitosActuales.decenasSegundos;
             }
             // Doble separador
-            //    ILI9341DrawFilledCircle(115, 120, 3, DIGITO_ENCENDIDO);
-            //    ILI9341DrawFilledCircle(115, 80, 3, DIGITO_ENCENDIDO);
+            ILI9341DrawFilledCircle(117, 120, 3, DIGITO_ENCENDIDO);
+            ILI9341DrawFilledCircle(117, 80, 3, DIGITO_ENCENDIDO);
             // Punto de decimas de segundo
             ILI9341DrawFilledCircle(260, 225, 3, DIGITO_ENCENDIDO);
 
@@ -353,7 +354,7 @@ void app_main(void)
     ConfigurarSalidasLed();
     ConfigurarTeclas();
     // Se crean las tareas
-    MensajeInicio();
+    //    MensajeInicio();
     xTaskCreate(ManejarEstadoCronometro, "ManejarEstadoCronometro", 2048, NULL, 2, NULL);
     xTaskCreate(EscanearPulsadores, "EscanearPulsadores", 1024, NULL, 1, NULL);
     xTaskCreate(ActualizarPantalla, "ActualizarPantalla", 4096, NULL, 1, NULL);
