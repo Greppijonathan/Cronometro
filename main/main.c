@@ -40,12 +40,14 @@ volatile EstadoCronometro estadoActual = ESTADO_PAUSADO; // Se inicializa en pau
 // Estructura de los dígitos
 typedef struct
 {
+    int decenasMinutos;
+    int unidadesMinutos;
     int decenasSegundos;
     int unidadesSegundos;
     int decimasSegundo;
 } DigitosCronometro;
 
-DigitosCronometro digitosActuales = {0, 0, 0};
+DigitosCronometro digitosActuales = {0, 0, 0, 0, 0};
 SemaphoreHandle_t semaforoAccesoDigitos;
 
 /*****************************************FUNCIONES AUXILIARES**********************************************/
@@ -66,6 +68,16 @@ void ActualizarDigitos()
             if (digitosActuales.unidadesSegundos == 0)
             {
                 digitosActuales.decenasSegundos = (digitosActuales.decenasSegundos + 1) % 6;
+
+                if (digitosActuales.decenasSegundos == 0)
+                {
+                    digitosActuales.unidadesMinutos = (digitosActuales.unidadesMinutos + 1) % 10;
+
+                    if (digitosActuales.unidadesMinutos == 0)
+                    {
+                        digitosActuales.decenasMinutos = (digitosActuales.decenasMinutos + 1) % 6;
+                    }
+                }
             }
         }
         xSemaphoreGive(semaforoAccesoDigitos); // Se libera el MUTEX
@@ -303,22 +315,24 @@ void ActualizarPantalla(void *parametros)
     ILI9341Init();
     ILI9341Rotate(ILI9341_Landscape_1);
 
-    //  panel_t Minutos = CrearPanel(0, 0, 2, (DIGITO_ALTO - 10), (DIGITO_ANCHO - 10), DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
+    //    panel_t Minutos = CrearPanel(0, 0, 2, (DIGITO_ALTO - 10), (DIGITO_ANCHO - 10), DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
     panel_t Segundos = CrearPanel(130, (240 - DIGITO_ALTO) / 2, 2, DIGITO_ALTO, DIGITO_ANCHO, DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
     panel_t Decimas = CrearPanel(270, 150, 1, (DIGITO_ALTO - 20), (DIGITO_ANCHO - 20), DIGITO_ENCENDIDO, DIGITO_APAGADO, DIGITO_FONDO);
 
     struct digitos_previos
     {
+        int decenasMinutosAnterior;
+        int unidadesMinutosAnterior;
         int decenasSegundosAnterior;
         int unidadesSegundosAnterior;
         int decimasSegundosAnterior;
-    } digitosPrevios = {-1, -1, -1}; // Inicializamos con valores "inválidos"
+    } digitosPrevios = {-1, -1, -1, -1, -1}; // Inicializamos con valores "inválidos"
 
     while (1)
     {
-        if (xSemaphoreTake(semaforoAccesoDigitos, portMAX_DELAY)) // Se accede al recurso compartido, se toma el semaforo
+        if (xSemaphoreTake(semaforoAccesoDigitos, portMAX_DELAY)) // Se accede al recurso compartido, se toma el semáforo
         {
-            // Logica para detectar cambio en los digitos y mostrarlos
+            // Lógica para detectar cambio en los dígitos y mostrarlos
             if (digitosActuales.decimasSegundo != digitosPrevios.decimasSegundosAnterior)
             {
                 DibujarDigito(Decimas, 0, digitosActuales.decimasSegundo);
@@ -334,17 +348,28 @@ void ActualizarPantalla(void *parametros)
                 DibujarDigito(Segundos, 0, digitosActuales.decenasSegundos);
                 digitosPrevios.decenasSegundosAnterior = digitosActuales.decenasSegundos;
             }
+            if (digitosActuales.unidadesMinutos != digitosPrevios.unidadesMinutosAnterior)
+            {
+                //                DibujarDigito(Minutos, 1, digitosActuales.unidadesMinutos);
+                digitosPrevios.unidadesMinutosAnterior = digitosActuales.unidadesMinutos;
+            }
+            if (digitosActuales.decenasMinutos != digitosPrevios.decenasMinutosAnterior)
+            {
+                //                DibujarDigito(Minutos, 0, digitosActuales.decenasMinutos);
+                digitosPrevios.decenasMinutosAnterior = digitosActuales.decenasMinutos;
+            }
             // Doble separador
-            ILI9341DrawFilledCircle(117, 120, 3, DIGITO_ENCENDIDO);
-            ILI9341DrawFilledCircle(117, 80, 3, DIGITO_ENCENDIDO);
-            // Punto de decimas de segundo
+            //            ILI9341DrawFilledCircle(117, 120, 3, DIGITO_ENCENDIDO);
+            //            ILI9341DrawFilledCircle(117, 80, 3, DIGITO_ENCENDIDO);
+            // Punto de décimas de segundo
             ILI9341DrawFilledCircle(260, 225, 3, DIGITO_ENCENDIDO);
 
-            xSemaphoreGive(semaforoAccesoDigitos); // Se libera el recurso compartid, se libera el semaforo
+            xSemaphoreGive(semaforoAccesoDigitos); // Se libera el recurso compartido, se libera el semáforo
         }
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(50)); // Tiempo de actualización de pantalla
     }
 }
+
 /***************************************** app_main()*****************************************/
 void app_main(void)
 {
